@@ -65,6 +65,15 @@ void manager(int mode,int z){
 int main(){
     int choice,mode,z=1;
     system("clear");
+    auto logo=R"(
+     ________         _______           _______
+    |__   ___|       |__   __|         |__   __|
+       | |   _  ___     | | __ _  ___     | | ___   ___
+       | |  | |/ __|    | |/ _` |/ __|    | |/ _ \ / _ \
+       | |  | | (__     | | (_| | (__     | | (_) |  __/
+       |_|  |_|\___|    |_|\__,_|\___|    |_|\___/ \___|
+    )";
+    cout<<logo;
     do{
         cout<<"Press 1 to Play or 0 to Exit: "<<endl;
         cin>>choice;
