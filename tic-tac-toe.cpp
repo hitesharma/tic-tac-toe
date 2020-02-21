@@ -3,8 +3,15 @@
 using  namespace std;
 int ip;
 char arr[10]={'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
-void grid(){
+void clear(){
+    #ifdef _WIN32
+    system("cls");
+    #elif __linux__
     system("clear");
+    #endif
+}
+void grid(){
+    clear();
     cout<<"Plater 1: O   VS   Player 2: X"<<endl;
     cout<<"     |     |     "<<endl;
     cout<<"  "<<arr[1]<<"  |  "<<arr[2]<<"  |  "<<arr[3]<<"  "<<endl;
@@ -64,7 +71,7 @@ void manager(int mode,int z){
 }
 int main(){
     int choice,mode,z=1;
-    system("clear");
+    clear();
     auto logo=R"(
      ________         _______           _______
     |__   ___|       |__   __|         |__   __|
@@ -77,7 +84,7 @@ int main(){
     do{
         cout<<"Press 1 to Play or 0 to Exit: "<<endl;
         cin>>choice;
-        system("clear");
+        clear();
         switch(choice){
             case 1:
             cout<<"Choose Mode:"<<endl<<"1)Human vs Human"<<endl<<"2)Human vs PC"<<endl;
@@ -88,7 +95,7 @@ int main(){
             exit(0);
             break;
             default:
-            system("clear");
+            clear();
             cout<<"Invalid Input";
         }
     }while(choice!=0);
